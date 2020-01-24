@@ -1,5 +1,5 @@
 {
-  "name": "datashaman/tongs-plugin",
+  "name": "example/tongs-plugin",
   "type": "library",
   "description": "My plugin for Tongs",
   "license": "MIT",

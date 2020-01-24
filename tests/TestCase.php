@@ -56,6 +56,13 @@ abstract class TestCase extends BaseTestCase
         $this->assertEquals($expected, $actual);
     }
 
+    /**
+     * Generate the path to a fixture, or the root if not path given.
+     *
+     * @param string $path
+     *
+     * @return string
+     */
     protected function fixture(string $path = '')
     {
         if ($path) {
