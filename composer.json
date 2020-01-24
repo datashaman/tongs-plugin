@@ -1,0 +1,40 @@
+{
+  "name": "datashaman/tongs-plugin",
+  "type": "library",
+  "description": "My plugin for Tongs",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Example User",
+      "email": "user@example.com"
+    }
+  ],
+  "require": {},
+  "require-dev": {
+    "datashaman/tongs": "^0.2.1",
+    "phpunit/phpunit": "^8.5"
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "tongs": {
+      "plugins": {
+        "example": "Example\\Tongs\\ExamplePlugin"
+      }
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "Example\\Tongs\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Example\\Tongs\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit"
+  }
+}
