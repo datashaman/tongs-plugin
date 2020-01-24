@@ -71,4 +71,23 @@ abstract class TestCase extends BaseTestCase
 
         return __DIR__ . '/fixtures';
     }
+
+    /**
+     * Run a callable with a temporary directory which is cleaned up
+     * after the callable runs.
+     *
+     * @param callable $callable
+     *
+     * @return mixed
+     */
+    protected function withTempDirectory(callable $callable)
+    {
+        $directory = tempnam(sys_get_temp_dir(), '');
+        unlink($directory);
+        File::makeDirectory($directory);
+        $ret = $callable($directory);
+        File::deleteDirectory($directory);
+
+        return $ret;
+    }
 }
