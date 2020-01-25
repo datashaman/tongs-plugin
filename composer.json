@@ -9,10 +9,8 @@
       "email": "user@example.com"
     }
   ],
-  "require": {
-    "datashaman/tongs": "^0.2.5"
-  },
   "require-dev": {
+    "datashaman/tongs": "^0.2.5",
     "phpunit/phpunit": "^8.5"
   },
   "config": {
