@@ -2,6 +2,14 @@
   "name": "example/tongs-plugin",
   "type": "library",
   "description": "My plugin for Tongs",
+  "keywords": [
+    "laravel",
+    "ssg",
+    "static-site",
+    "static-site-generator",
+    "tongs",
+    "tongs-plugin"
+  ],
   "license": "MIT",
   "authors": [
     {
