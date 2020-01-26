@@ -9,14 +9,13 @@ use Illuminate\Support\Collection;
 class ExamplePlugin extends Plugin
 {
     /**
-     * @param Tongs $tongs
      * @param array $options
      */
-    public function __construct(Tongs $tongs, array $options = [])
+    public function __construct(array $options = [])
     {
         $options = $this->normalize($options);
 
-        parent::__construct($tongs, $options);
+        parent::__construct($options);
     }
 
     /**
