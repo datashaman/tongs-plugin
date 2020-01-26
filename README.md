@@ -1,6 +1,6 @@
 # tongs example plugin
 
-Template package for [Tongs](https://github.com/datashaman/tongs).
+Template plugin for [Tongs](https://github.com/datashaman/tongs) static site generator.
 
 ## setup
 
