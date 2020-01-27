@@ -12,7 +12,7 @@ class ExamplePluginTest extends TestCase
     public function testHandle()
     {
         $tongs = new Tongs($this->fixture('example-scenario'));
-        $tongs->use(new ExamplePlugin($tongs));
+        $tongs->use(new ExamplePlugin());
         $tongs->build();
         $this->assertDirEquals($this->fixture('example-scenario/expected'), $this->fixture('example-scenario/build'));
     }
