@@ -4,7 +4,6 @@ namespace Example\Tongs;
 
 use Datashaman\Tongs\Plugins\Plugin;
 use Datashaman\Tongs\Tongs;
-use Illuminate\Support\Collection;
 
 class ExamplePlugin extends Plugin
 {
@@ -21,21 +20,20 @@ class ExamplePlugin extends Plugin
     /**
      * Handle files passed down the pipeline, and call the next plugin in the pipeline.
      *
-     * @param Collection $files
+     * @param array $files
      * @param callable $next
      *
-     * @return Collection
+     * @return array
      */
-    public function handle(Collection $files, callable $next): Collection
+    public function handle(array $files, callable $next): array
     {
-        $files = $files
-            ->map(
-                function ($file, $path) {
-                    return $this->transform($file, $path);
-                }
-            );
+        $ret = [];
 
-        return $next($files);
+        foreach ($files as $path => $file) {
+            $ret[$path] = $this->transform($file, $path);
+        }
+
+        return $next($ret);
     }
 
     /**
